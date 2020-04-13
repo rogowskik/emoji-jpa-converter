@@ -1,4 +1,4 @@
-package com.emoji.holder;
+package com.github.rogowskik.holder;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

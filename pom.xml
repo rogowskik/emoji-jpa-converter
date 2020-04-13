@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.emoji</groupId>
+    <groupId>com.github.rogowskik</groupId>
     <artifactId>emoji-jpa-converter</artifactId>
     <version>0.0.1</version>
     <name>emoji-jpa-converter</name>
@@ -86,5 +86,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 </project>

@@ -1,8 +1,8 @@
-package com.emoji;
+package com.github.rogowskik;
 
-import com.emoji.holder.Emoji;
-import com.emoji.support.EmojiManager;
-import com.emoji.initalizer.Loader;
+import com.github.rogowskik.holder.Emoji;
+import com.github.rogowskik.support.EmojiManager;
+import com.github.rogowskik.initalizer.Loader;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;

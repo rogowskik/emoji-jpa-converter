@@ -1,7 +1,7 @@
-package com.emoji.support;
+package com.github.rogowskik.support;
 
-import com.emoji.holder.Emoji;
-import com.emoji.initalizer.Loader;
+import com.github.rogowskik.holder.Emoji;
+import com.github.rogowskik.initalizer.Loader;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

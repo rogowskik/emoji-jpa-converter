@@ -1,4 +1,4 @@
-package com.emoji.initalizer;
+package com.github.rogowskik.initalizer;
 
 class EmojiModuleInitialiationException extends RuntimeException {
 

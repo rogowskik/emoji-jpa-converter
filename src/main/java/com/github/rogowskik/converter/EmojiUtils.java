@@ -1,8 +1,8 @@
-package com.emoji.converter;
+package com.github.rogowskik.converter;
 
-import com.emoji.support.EmojiManager;
-import com.emoji.holder.AliasHolder;
-import com.emoji.holder.UnicodeHolder;
+import com.github.rogowskik.support.EmojiManager;
+import com.github.rogowskik.holder.AliasHolder;
+import com.github.rogowskik.holder.UnicodeHolder;
 import lombok.experimental.UtilityClass;
 
 import java.nio.charset.StandardCharsets;

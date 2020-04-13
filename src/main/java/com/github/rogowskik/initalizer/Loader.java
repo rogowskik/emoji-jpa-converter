@@ -1,7 +1,7 @@
-package com.emoji.initalizer;
+package com.github.rogowskik.initalizer;
 
-import com.emoji.holder.Emoji;
-import com.emoji.support.EmojiProperties;
+import com.github.rogowskik.holder.Emoji;
+import com.github.rogowskik.support.EmojiProperties;
 import com.github.cliftonlabs.json_simple.JsonException;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
