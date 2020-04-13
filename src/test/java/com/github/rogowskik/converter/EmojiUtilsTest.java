@@ -187,7 +187,6 @@ public class EmojiUtilsTest {
                 "</html>\n";
         //WHEN
         String result = EmojiUtils.toEmoji(str);
-        System.out.println(result);
         // THEN
         assertEquals(
                 str,
