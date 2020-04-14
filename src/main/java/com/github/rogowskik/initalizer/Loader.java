@@ -1,29 +1,27 @@
 package com.github.rogowskik.initalizer;
 
-import com.github.rogowskik.holder.Emoji;
-import com.github.rogowskik.support.EmojiProperties;
 import com.github.cliftonlabs.json_simple.JsonException;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
+import com.github.rogowskik.holder.Emoji;
+import com.github.rogowskik.support.EmojiProperties;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Loader {
 
-    private static final String EMOJS_PATH = "data-emojis.json";
+    private static final String EMOJS_PATH = "/data-emojis.json";
 
     public static List<Emoji> init() {
-        Reader reader = getReader();
+        String reader = getEmojisAsString();
         List<Emoji> emojiList = new ArrayList<>();
         try {
             JsonObject jsonObject = (JsonObject) Jsoner.deserialize(reader);
@@ -49,15 +47,14 @@ public class Loader {
                 .build();
     }
 
-    private static Reader getReader() {
-        Reader reader;
-        try {
-            URI uri = Thread.currentThread().getContextClassLoader().getResource(EMOJS_PATH).toURI();
-            reader = Files.newBufferedReader(Paths.get(uri));
-        } catch (URISyntaxException | IOException e) {
-            throw new EmojiModuleInitialiationException("Error while reading emojis json file");
-        }
-        return reader;
+
+
+    private static String getEmojisAsString() {
+        InputStream resourceAsStream = Loader.class.getResourceAsStream(EMOJS_PATH);
+        return new BufferedReader(new InputStreamReader(resourceAsStream))
+                .lines()
+                .parallel()
+                .collect(Collectors.joining("\n"));
     }
 
 

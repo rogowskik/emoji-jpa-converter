@@ -4,7 +4,7 @@
 
     <groupId>com.github.rogowskik</groupId>
     <artifactId>emoji-jpa-converter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Emoji JPA converter</name>
     <description>Library which converts emoji symbols to their aliases and vice versa</description>
@@ -85,6 +85,26 @@
                         <id>attach-sources</id>
                         <goals>
                             <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>default-testResources</id>
+                        <phase>process-test-resources</phase>
+                        <goals>
+                            <goal>testResources</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
                         </goals>
                     </execution>
                 </executions>

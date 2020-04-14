@@ -24,7 +24,7 @@ __Java library which converts emoji symbols such as 😂 to their aliases ":grin
 implementation 'com.github.rogowskik:emoji-jpa-converter:0.0.1''
 ```
 
-#####Alternative way:
+####Alternative way:
 Download the source code of project, build it with `mvn clean install` and add the generated jar to classpath.
 
 

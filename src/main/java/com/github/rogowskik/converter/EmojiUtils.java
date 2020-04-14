@@ -1,6 +1,5 @@
 package com.github.rogowskik.converter;
 
-import com.github.rogowskik.support.EmojiManager;
 import com.github.rogowskik.holder.AliasHolder;
 import com.github.rogowskik.holder.UnicodeHolder;
 import lombok.experimental.UtilityClass;
@@ -21,7 +20,7 @@ public class EmojiUtils {
     private static final Pattern ALIAS_PATTERN = Pattern.compile(ALIAS_REGEX);
 
 
-    static String toEmoji(String input) {
+   public static String toEmoji(String input) {
         List<AliasHolder> aliasHolders = getPossibleAliases(input);
         String result = input;
         for (AliasHolder candidate : aliasHolders) {
@@ -46,7 +45,7 @@ public class EmojiUtils {
         return candidates;
     }
 
-    static String toAlias(String text) {
+    public static String toAlias(String text) {
         String input = new String(text.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8);
         Matcher matcher = EMOJI_PATTERN.matcher(input);
 

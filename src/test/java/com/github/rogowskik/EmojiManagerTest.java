@@ -1,7 +1,7 @@
 package com.github.rogowskik;
 
+import com.github.rogowskik.converter.EmojiManager;
 import com.github.rogowskik.holder.Emoji;
-import com.github.rogowskik.support.EmojiManager;
 import com.github.rogowskik.initalizer.Loader;
 import org.junit.BeforeClass;
 import org.junit.Test;

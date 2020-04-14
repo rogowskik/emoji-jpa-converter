@@ -1,4 +1,4 @@
-package com.github.rogowskik.support;
+package com.github.rogowskik.converter;
 
 import com.github.rogowskik.holder.Emoji;
 import com.github.rogowskik.initalizer.Loader;
