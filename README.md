@@ -14,14 +14,14 @@ __Java library which converts emoji symbols such as 😂 to their aliases ":grin
 <dependency>
   <groupId>com.github.rogowskik</groupId>
   <artifactId>emoji-jpa-converter</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
 ##### Via Gradle:
 
 ```gradle
-implementation 'com.github.rogowskik:emoji-jpa-converter:0.0.1''
+implementation 'com.github.rogowskik:emoji-jpa-converter:0.0.2''
 ```
 
 ####Alternative way:
